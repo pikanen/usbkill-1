@@ -1,8 +1,6 @@
 # usbkill 
 `usbkill` is an anti-forensic LKM kill-switch that waits for a change on your usb ports and turns off your computer.
 
-usbkill Àº anti-forensic ÀûÀç °¡´É Ä¿³Î ¸ğµâ  ( Loadable kernel module ,  LKM ) kill-switch·Î¼­ ´ç½ÅÀÇ usbÆ÷Æ®ÀÇ º¯È­¸¦ ±â´Ù¸®°í º¯È­°¡ »ı±â¸é ÄÄÇ»ÅÍ¸¦ Á¾·á½ÃÅ²´Ù.
-
 To run:
 
 ```shell
@@ -12,7 +10,6 @@ sudo insmod usbkill.ko
 
 You will need to have the `linux-headers` package installed. If you haven't:
 
-´ç½ÅÀº 'linux-headers' ÆĞÅ°ÁöÀÇ ¼³Ä¡°¡ ÇÊ¿äÇÒ °ÍÀÔ´Ï´Ù. ¸¸¾à ¼³Ä¡µÇ¾îÀÖÁö ¾Ê´Ù¸é:
 
 ```shell
 apt-get install linux-headers-$(uname -r)
@@ -20,7 +17,30 @@ apt-get install linux-headers-$(uname -r)
 
 List usb devices:
 
-usb µğ¹ÙÀÌ½º ¸ñ·Ï
+```shell
+lsusb
+```
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+# usbkill 
+usbkillì€ anti-forensic ì ì¬ ê°€ëŠ¥ ì»¤ë„ ëª¨ë“ˆ (Loadable kernel module, LKM) kill-switchë¡œì¨ ë‹¹ì‹ ì˜ usbí¬íŠ¸ì˜ ë³€í™”ë¥¼ ê¸°ë‹¤ë¦¬ê³  ë³€í™”ê°€ ìƒê¸°ë©´ ì»´í“¨í„°ë¥¼ ì¢…ë£Œì‹œí‚¨ë‹¤.
+
+ì‹¤í–‰ ë°©ë²•:
+
+```shell
+make
+sudo insmod usbkill.ko
+```
+
+ë‹¹ì‹ ì€ 'linux-headers' íŒ¨í‚¤ì§€ì˜ ì„¤ì¹˜ê°€ í•„ìš”í•  ê²ƒì…ë‹ˆë‹¤. ë§Œì•½ ì„¤ì¹˜ë˜ì–´ìˆì§€ ì•Šë‹¤ë©´:
+
+```shell
+apt-get install linux-headers-$(uname -r)
+```
+
+usb ë””ë°”ì´ìŠ¤ ëª©ë¡
+
 ```shell
 lsusb
 ```
