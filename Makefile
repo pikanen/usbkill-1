@@ -1,3 +1,4 @@
+
 obj-m += usbkill.o
 
 KERNELVER	?= $(shell uname -r)
