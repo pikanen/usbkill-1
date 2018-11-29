@@ -105,6 +105,7 @@ static int __init mod_init(void) {
 	usb_register_notify(&usb_notify);
 	pr_info("Watching for USB devices...\n");
 	return 0;
+	return val;
 }
 static void __exit mod_exit(void) {
 	usb_unregister_notify(&usb_notify);
